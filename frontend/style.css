@@ -1,0 +1,157 @@
+/* Grundläggande reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Svep-overlay som täcker hela skärmen, animerad gradient */
+.sweep-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(100,100,255,0.1) 40%,
+    rgba(255,255,255,0.3) 50%,
+    rgba(100,100,255,0.1) 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: sweep 1s infinite linear;
+  filter: blur(2px);
+  opacity: 0.6;
+}
+
+@keyframes sweep {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* Dölj element med .hidden */
+.hidden {
+  display: none;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 3rem auto;
+  background: #fff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Distortion-effekt på containern */
+.container.distort {
+  filter: blur(3px) contrast(1.2);
+  transition: filter 0.3s;
+}
+
+/* Rubrik */
+h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* Inmatningsfält och knapp */
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #007bff;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Laddningsindikator (enbart text) */
+#loading {
+  margin-bottom: 1rem;
+}
+
+/* Resultatbox */
+.result-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fafafa;
+  text-align: left;
+}
+
+.result-box h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Kopiera-knapp */
+.copy-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  background: #fff;
+  color: #007bff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.copy-btn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Beskrivning, placerad längst ner */
+.description {
+  text-align: left;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.description ul {
+  list-style: disc inside;
+  margin-bottom: 0.5rem;
+}
+
+.final-text {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}

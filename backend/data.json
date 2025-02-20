@@ -1,0 +1,130 @@
+{
+  "groups": {
+    "1": {
+      "group_number": "1",
+      "start_time": "2025-02-20T13:13:58.796Z",
+      "member_count": 2,
+      "assignments": [
+        {
+          "concept_a": "Maskininlärning",
+          "concept_b": "Oövervakad inlärning",
+          "concept_c": "Robotik",
+          "concept_d": "Multimodal AI",
+          "join_time": "2025-02-20T13:13:58.805Z"
+        },
+        {
+          "concept_a": "Bias",
+          "concept_b": "Deep Learning",
+          "concept_c": "Neurala nätverk",
+          "concept_d": "Generativa adversariella nätverk (GAN)",
+          "join_time": "2025-02-20T13:26:07.889Z"
+        }
+      ]
+    },
+    "2": {
+      "group_number": "2",
+      "start_time": "2025-02-20T13:10:35.807Z",
+      "member_count": 2,
+      "assignments": [
+        {
+          "concept_a": "AI-modell",
+          "concept_b": "Övervakad inlärning",
+          "concept_c": "Parametrar/vikter",
+          "concept_d": "Artificiell superintelligens",
+          "join_time": "2025-02-20T13:10:35.816Z"
+        },
+        {
+          "concept_a": "Bias",
+          "concept_b": "Deep Learning",
+          "concept_c": "Promptning",
+          "concept_d": "Emergent Abilities",
+          "join_time": "2025-02-20T13:23:32.978Z"
+        }
+      ]
+    },
+    "3": {
+      "group_number": "3",
+      "start_time": "2025-02-20T12:58:28.518Z",
+      "member_count": 2,
+      "assignments": [
+        {
+          "concept_a": "Maskininlärning",
+          "concept_b": "Övervakad inlärning",
+          "concept_c": "Neurala nätverk",
+          "concept_d": "Multimodal AI",
+          "join_time": "2025-02-20T12:58:28.527Z"
+        },
+        {
+          "concept_a": "AI-modell",
+          "concept_b": "Förstärkt lärande",
+          "concept_c": "Robotik",
+          "concept_d": "Emergent Abilities",
+          "join_time": "2025-02-20T13:06:16.846Z"
+        }
+      ]
+    },
+    "4": {
+      "group_number": "4",
+      "start_time": "2025-02-20T13:06:24.127Z",
+      "member_count": 2,
+      "assignments": [
+        {
+          "concept_a": "Algoritm",
+          "concept_b": "Deep Learning",
+          "concept_c": "Neurala nätverk",
+          "concept_d": "Artificiell generell intelligens",
+          "join_time": "2025-02-20T13:06:24.135Z"
+        },
+        {
+          "concept_a": "AI-modell",
+          "concept_b": "Generativ AI",
+          "concept_c": "Large Language Model",
+          "concept_d": "Multimodal AI",
+          "join_time": "2025-02-20T13:14:03.896Z"
+        }
+      ]
+    },
+    "5": {
+      "group_number": "5",
+      "start_time": "2025-02-20T12:50:28.873Z",
+      "member_count": 1,
+      "assignments": [
+        {
+          "concept_a": "Maskininlärning",
+          "concept_b": "Oövervakad inlärning",
+          "concept_c": "Neurala nätverk",
+          "concept_d": "Artificiell generell intelligens",
+          "join_time": "2025-02-20T12:50:28.882Z"
+        }
+      ]
+    },
+    "7": {
+      "group_number": "7",
+      "start_time": "2025-02-20T12:50:11.443Z",
+      "member_count": 1,
+      "assignments": [
+        {
+          "concept_a": "Bias",
+          "concept_b": "Övervakad inlärning",
+          "concept_c": "Robotik",
+          "concept_d": "Generativa adversariella nätverk (GAN)",
+          "join_time": "2025-02-20T12:50:11.452Z"
+        }
+      ]
+    },
+    "112": {
+      "group_number": "112",
+      "start_time": "2025-02-20T12:51:01.298Z",
+      "member_count": 1,
+      "assignments": [
+        {
+          "concept_a": "Algoritm",
+          "concept_b": "Oövervakad inlärning",
+          "concept_c": "Robotik",
+          "concept_d": "Artificiell generell intelligens",
+          "join_time": "2025-02-20T12:51:01.308Z"
+        }
+      ]
+    }
+  }
+}

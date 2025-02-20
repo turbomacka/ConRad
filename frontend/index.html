@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConRad (Concept Randomizer)</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Neutralt, professionellt typsnitt -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Svep-overlay (initialt dold) -->
+  <div id="sweepOverlay" class="sweep-overlay hidden"></div>
+
+  <div class="container" id="mainContainer">
+    <h1>ConRad (Concept Randomizer)</h1>
+
+    <!-- Formulär för att kunna trycka Enter eller klicka på knappen -->
+    <form id="groupForm" class="input-group">
+      <input type="text" id="groupNumber" placeholder="Ange ditt gruppnummer" required>
+      <button type="submit" id="submitBtn">Hämta Begrepp</button>
+    </form>
+
+    <!-- Text som visar att vi hämtar begrepp -->
+    <div id="loading" class="hidden">
+      <p>Hämtar begrepp...</p>
+    </div>
+
+    <!-- Här visas resultatet när effekten är klar -->
+    <div id="result" class="result-box hidden">
+      <h2>Dina slumpade begrepp:</h2>
+      <ul id="conceptList"></ul>
+    </div>
+
+    <button type="button" id="copyBtn" class="copy-btn hidden">Kopiera begreppen</button>
+    
+    <!-- Förklaringen flyttad till botten -->
+    <div class="description">
+      <ul>
+        <li><strong>Fördefinierade pooler:</strong> Varje kategori har en fast uppsättning begrepp som används vid varje omgång.</li>
+        <li><strong>Unika kombinationer:</strong> När du anger ditt gruppnummer genereras fyra begrepp – ett från varje kategori – som inte tidigare har delats ut inom din grupp.</li>
+        <li><strong>Ingen återanvändning:</strong> Inom samma grupp ser vi till att ett begrepp inte återanvänds förrän gruppen nollställs, vilket garanterar att varje omgång innehåller fräscha och unika kombinationer.</li>
+      </ul>
+      <p class="final-text">Din unika lista: Detta blir alltså din unika begreppslista – förvara den väl 😊👍</p>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
