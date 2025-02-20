@@ -16,17 +16,15 @@ document.getElementById('groupForm').addEventListener('submit', async (e) => {
   resultEl.classList.add('hidden');
   const copyBtn = document.getElementById('copyBtn');
   copyBtn.classList.add('hidden');
-  const uniqueListMessage = document.getElementById('uniqueListMessage');
-  uniqueListMessage.classList.add('hidden');
 
-  // Visa svepeffekt och glitch under randomisering
+  // Visa overlay och distortion
   const sweepOverlay = document.getElementById('sweepOverlay');
   sweepOverlay.classList.remove('hidden');
   const container = document.getElementById('mainContainer');
   container.classList.add('distort');
 
   try {
-    const API_URL = "https://conrad-backend.onrender.com";
+    const API_URL = "https://conrad-backend.onrender.com";  // 🔹 Backend-URL
     const response = await fetch(`${API_URL}/api/join`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -39,18 +37,50 @@ document.getElementById('groupForm').addEventListener('submit', async (e) => {
       return;
     }
 
+    // Hämta de fyra begreppen
+    const assignment = data.assignment;
+    const concepts = [
+      assignment.concept_a,
+      assignment.concept_b,
+      assignment.concept_c,
+      assignment.concept_d
+    ];
+
+    // Vänta 2 sekunder (under tiden visas svepeffekt och distortion)
     setTimeout(() => {
+      // Ta bort overlay och distortion
       sweepOverlay.classList.add('hidden');
       container.classList.remove('distort');
 
-      document.getElementById('conceptList').innerHTML = data.assignment
-        ? Object.values(data.assignment).map(concept => `<li>${concept}</li>`).join('')
-        : '';
+      // Fyll listan med begrepp
+      const conceptList = document.getElementById('conceptList');
+      conceptList.innerHTML = ''; // Rensa gammalt innehåll
+      concepts.forEach((concept) => {
+        const li = document.createElement('li');
+        li.textContent = concept;
+        conceptList.appendChild(li);
+      });
 
+      // Visa resultatet
       resultEl.classList.remove('hidden');
-      uniqueListMessage.classList.remove('hidden');
-      copyBtn.classList.remove('hidden');
 
+      // Visa meddelandet om unika listan
+      document.getElementById('uniqueListMessage').classList.remove('hidden');
+
+      // Visa kopieraknappen
+      copyBtn.classList.remove('hidden');
+      copyBtn.textContent = 'Kopiera begreppen';
+      copyBtn.onclick = () => {
+        const textToCopy = concepts.join('\n');
+        navigator.clipboard.writeText(textToCopy)
+          .then(() => {
+            copyBtn.textContent = 'Kopierat!';
+            setTimeout(() => { copyBtn.textContent = 'Kopiera begreppen'; }, 2000);
+          })
+          .catch(err => console.error('Fel vid kopiering: ', err));
+      };
+
+      // Dölj "Hämtar begrepp..."
       loadingEl.classList.add('hidden');
     }, 2000);
 
