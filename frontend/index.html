@@ -5,8 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ConRad (Concept Randomizer)</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Typsnitt -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <script>
+    // Anpassa höjd för Canvas-inbäddning
+    function resizeIframe() {
+      if (window !== window.parent) {
+        window.parent.postMessage({ subject: "lti.frameResize", height: document.body.scrollHeight }, "*");
+      }
+    }
+    window.onload = resizeIframe;
+    window.onresize = resizeIframe;
+  </script>
 </head>
 <body>
   <!-- Svep-overlay (initialt dold) -->

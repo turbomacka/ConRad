@@ -5,12 +5,9 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background: #f4f4f4;
-  color: #333;
-  min-height: 100vh;
-  position: relative;
+html, body {
+  background: transparent !important; /* Gör bakgrunden genomskinlig i Canvas */
+  overflow: hidden; /* Ingen scrollning i iframe */
 }
 
 /* Svep-overlay som täcker hela skärmen, animerad gradient */
@@ -47,15 +44,15 @@ body {
 
 /* Container */
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 500px;
-  margin: 3rem auto;
-  background: #fff;
+  margin: auto;
+  background: transparent;
   padding: 2rem;
-  border: 2px solid #005BAC; /* LTU blå */
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: none;
+  box-shadow: none;
   text-align: center;
+  min-height: 650px; /* Justera vid behov */
 }
 
 /* Distortion-effekt på containern */
