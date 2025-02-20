@@ -64,6 +64,9 @@ document.getElementById('groupForm').addEventListener('submit', async (e) => {
       // Visa resultatet
       resultEl.classList.remove('hidden');
 
+      // Visa meddelandet om unika listan
+      document.getElementById('uniqueListMessage').classList.remove('hidden');
+
       // Visa kopieraknappen
       copyBtn.classList.remove('hidden');
       copyBtn.textContent = 'Kopiera begreppen';
