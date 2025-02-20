@@ -10,14 +10,6 @@ html, body {
   overflow: hidden;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background: #f4f4f4;
-  color: #333;
-  min-height: 100vh;
-  position: relative;
-}
-
 /* Svep-overlay som täcker hela skärmen, animerad gradient */
 .sweep-overlay {
   position: fixed;
@@ -60,7 +52,7 @@ body {
   border: none;
   box-shadow: none;
   text-align: center;
-  min-height: 650px;
+  min-height: 650px; /* Justera om det behövs */
 }
 
 /* Distortion-effekt på containern */
@@ -117,7 +109,7 @@ button:hover {
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 4px;
-  background: #fafafa;
+  background: rgba(255, 255, 255, 0.9); /* Lätt transparens */
   text-align: left;
 }
 
