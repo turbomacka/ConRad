@@ -24,7 +24,8 @@ document.getElementById('groupForm').addEventListener('submit', async (e) => {
   container.classList.add('distort');
 
   try {
-    const response = await fetch('http://localhost:3000/api/join', {
+    const API_URL = "https://conrad-backend.onrender.com";  // 🔹 Uppdaterad backend-URL
+    const response = await fetch(`${API_URL}/api/join`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ groupNumber })
