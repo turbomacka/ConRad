@@ -68,6 +68,57 @@ html, body {
   display: none;
 }
 
+/* Rubrik */
+h1 {
+  color: var(--ltu-blue);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Inmatningsfält */
+input[type="text"] {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid var(--ltu-blue);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+  color: var(--ltu-darkgray);
+}
+
+/* Knappar */
+button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--ltu-blue);
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: var(--ltu-lightblue);
+}
+
+/* Laddningsindikator */
+#loading {
+  margin-bottom: 1rem;
+}
+
+/* Resultatbox */
+.result-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background: var(--ltu-lightgray);
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Kopiera-knapp */
 .copy-btn {
   margin-top: 1rem;
