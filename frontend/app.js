@@ -16,15 +16,17 @@ document.getElementById('groupForm').addEventListener('submit', async (e) => {
   resultEl.classList.add('hidden');
   const copyBtn = document.getElementById('copyBtn');
   copyBtn.classList.add('hidden');
+  const uniqueListMessage = document.getElementById('uniqueListMessage');
+  uniqueListMessage.classList.add('hidden');
 
-  // Visa overlay och distortion
+  // Visa svepeffekt och glitch under randomisering
   const sweepOverlay = document.getElementById('sweepOverlay');
   sweepOverlay.classList.remove('hidden');
   const container = document.getElementById('mainContainer');
   container.classList.add('distort');
 
   try {
-    const API_URL = "https://conrad-backend.onrender.com";  // 🔹 Uppdaterad backend-URL
+    const API_URL = "https://conrad-backend.onrender.com";
     const response = await fetch(`${API_URL}/api/join`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -46,7 +48,7 @@ document.getElementById('groupForm').addEventListener('submit', async (e) => {
       assignment.concept_d
     ];
 
-    // Vänta 2 sekunder (under tiden visas svepeffekt och distortion)
+    // Vänta 2 sekunder under randomiseringseffekten
     setTimeout(() => {
       // Ta bort overlay och distortion
       sweepOverlay.classList.add('hidden');
@@ -63,9 +65,7 @@ document.getElementById('groupForm').addEventListener('submit', async (e) => {
 
       // Visa resultatet
       resultEl.classList.remove('hidden');
-
-      // Visa meddelandet om unika listan
-      document.getElementById('uniqueListMessage').classList.remove('hidden');
+      uniqueListMessage.classList.remove('hidden'); // Visa meddelandet om unik lista
 
       // Visa kopieraknappen
       copyBtn.classList.remove('hidden');
