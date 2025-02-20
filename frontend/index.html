@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ConRad (Concept Randomizer)</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Neutralt, professionellt typsnitt -->
+  <!-- typsnitt -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -31,17 +31,19 @@
       <h2>Dina slumpade begrepp:</h2>
       <ul id="conceptList"></ul>
     </div>
-
-    <button type="button" id="copyBtn" class="copy-btn hidden">Kopiera begreppen</button>
     
-    <!-- Förklaringen flyttad till botten -->
+    <button type="button" id="copyBtn" class="copy-btn hidden">Kopiera begreppen</button>
+
+    <p id="uniqueListMessage" class="hidden"><strong>Din unika lista:</strong> Detta blir alltså din unika begreppslista – förvara den väl 😊👍</p>
+
+    <!-- Förklaringen längst ned -->
     <div class="description">
       <ul>
         <li><strong>Fördefinierade pooler:</strong> Varje kategori har en fast uppsättning begrepp som används vid varje omgång.</li>
         <li><strong>Unika kombinationer:</strong> När du anger ditt gruppnummer genereras fyra begrepp – ett från varje kategori – som inte tidigare har delats ut inom din grupp.</li>
         <li><strong>Ingen återanvändning:</strong> Inom samma grupp ser vi till att ett begrepp inte återanvänds förrän gruppen nollställs, vilket garanterar att varje omgång innehåller fräscha och unika kombinationer.</li>
       </ul>
-      <p class="final-text">Din unika lista: Detta blir alltså din unika begreppslista – förvara den väl 😊👍</p>
+     
     </div>
 
   </div>
